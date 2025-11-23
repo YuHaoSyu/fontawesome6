@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font-Awesome Category</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <datalist id="style-list">
+    <option value="brands">brands</option>
+    <option value="duotone">duotone</option>
+    <option value="light">light</option>
+    <option value="regular">regular</option>
+    <option value="solid">solid</option>
+    <option value="thin">thin</option>
+  </datalist>
+  <div class="container-fluid pt-3">
+    <div class="row">
+      <div class="col-6">
+        <form id="filter-form" action="/">
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" class="form-control" id="icon-style" name="style" list="style-list" value="regular" aria-label="Icon style">
+            <input type="text" class="form-control" id="icon-file" name="file" aria-label="Icon file name">
+            <button type="submit" class="btn btn-outline-secondary">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row g-3" id="icon-row"></div>
+  </div>
+  <template id="fontawesome-url">
+    <div class="col-12"> <a href="https://fontawesome.com/v6/search?q={{file}}" target="_blank">Fontawesome {{file}}</a></div>
+  </template>
+  <template id="temp">
+    <div class="col-auto">
+      <a href="https://raw.githubusercontent.com/YuHaoSyu/font-awesome-6-pro/refs/heads/main/svgs/{{style}}/{{file}}.svg" download="{{file}}.svg"><img width="36" height="36" title="{{file}}" alt="{{style}} {{file}}" src="https://raw.githubusercontent.com/YuHaoSyu/font-awesome-6-pro/refs/heads/main/svgs/{{style}}/{{file}}.svg"></a>
+    </div>
+  </template>
+  <script src="./js/icons.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
