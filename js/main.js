@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
     document.getElementById('icon-row').innerHTML = url
     return
   }
+  document.getElementById('icon-style').value =style
   document.getElementById('icon-file').value = file
 
   document.getElementById('icon-row').innerHTML = url + svgs
