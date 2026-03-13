@@ -13,18 +13,18 @@ document.addEventListener('DOMContentLoaded', function (e) {
   file = file.toLowerCase()
 
   const form = document.getElementById('filter-form')
-  form.attributes.action.value = location.pathname
+  form.attributes.action = location.pathname
   const url = document
     .getElementById('fontawesome-url')
     .content.cloneNode(true)
     .firstElementChild.outerHTML.replace(/{{file}}/g, file)
 
+  document.getElementById('icon-style').value =style
+  document.getElementById('icon-file').value = file
   if (!file) {
     document.getElementById('icon-row').innerHTML = url
     return
   }
-  document.getElementById('icon-style').value =style
-  document.getElementById('icon-file').value = file
 
   document.getElementById('icon-row').innerHTML = url + svgs
     .filter(svg => new RegExp(file).test(svg))
