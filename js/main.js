@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
   file = file.toLowerCase()
 
   const form = document.getElementById('filter-form')
-  form.attributes.action = location.pathname
+  form.attributes.action.value = location.pathname
   const url = document
     .getElementById('fontawesome-url')
     .content.cloneNode(true)
